@@ -62,15 +62,38 @@
 **R (Result)**
 
 > As a result, CI/CD platform became more reliable and easier to support. The migration significantly improved reliability (SLA nearing 99%) and reduced operational overhead. Teams can focus on feature delivery—after a GitHub commit, the automated pipeline executes the remaining steps end to end. Over time we saw fewer platform -related issues and faster troubleshooting because the pipeline behavior was standardized and well documented.
-> *(Optional metrics to plug in: “release time reduced by ~X%”, “manual steps reduced from A to B”, “deployment failures reduced by X%”, “MTTR improved by X%”.)*
+This is the kind of practical platform improvement I’d bring to WebBroker—standardize delivery, add the right gates, and make releases safer and faster at scale.
 
 
 ### 5) “Tell me about a time you handled a production/release issue.”
 
-**How to answer**
+### STAR Story #2 — Handling a Release/Production Issue & Preventing Recurrence (K8s/Azure troubleshooting + governance)
 
-* Use STAR (see Story #2 below).
-* Emphasize: triage, communication, rollback/mitigation, root cause, prevention.
+**S (Situation)**
+
+> The ITS team moved up the legacy Nexus decommissioning timeline without issuing an official communication. We only became aware of the change two days before the scheduled shutdown this Saturday, and we don’t yet have full clarity on the potential impact to dependent services.
+
+**T (Task)**
+
+> We needed to restore stability quickly, coordinate across teams, identify if the new nexus is ready (both uploading and fetch dependencies).
+
+**A (Action)**
+
+我们这边的 Actions（Owner: your team）
+
+Impact assessment: 立即梳理所有依赖 legacy Nexus 的服务/流水线（build、deploy、runtime pull），列出 owner、环境、影响级别（P0/P1/P2）。
+
+Dependency validation: 检查每个服务的 settings.xml / repo URL / credentials，确认是否还指向 old Nexus。
+
+Dry-run / Smoke test: 对关键服务做一次 end-to-end build + deploy 的 dry-run，验证新 Nexus 路径、权限和 artifact 可用性。
+
+Fallback plan: 准备应急方案（例如临时改回缓存源/备用 repo、关键 artifact 预拉取/预缓存、必要时暂停非关键发布）。
+
+Monitoring & on-call: Decommission window 前后安排值守，提前定义触发条件与回滚/降级路径。
+
+**R (Result)**
+
+> WebBroker is a reliability-sensitive platform, and I’m comfortable operating under release pressure while improving the system so it gets safer over time.
 
 ---
 
@@ -87,50 +110,3 @@
 **Script**
 
 > I mentor through pairing, code/pipeline reviews, and creating practical runbooks and checklists. I try to transfer decision-making frameworks—not just steps—so people can troubleshoot independently. Over time that reduces on-call load and improves release confidence.
-
----
-
----
-
-## 3) Two STAR Stories — Memorize-Ready (English)
-
-Below are two stories you can reuse for many behavioral questions. Replace bracketed parts with your real details (app names, metrics, timelines).
-
----
-
-
-**One-line “So what”**
-
-> This is the kind of practical platform improvement I’d bring to WebBroker—standardize delivery, add the right gates, and make releases safer and faster at scale.
-
----
-
-### STAR Story #2 — Handling a Release/Production Issue & Preventing Recurrence (K8s/Azure troubleshooting + governance)
-
-**S (Situation)**
-
-> During a release window for a production-facing service, we saw an unexpected issue shortly after deployment—[for example: increased error rates / latency / pods restarting] that risked impacting users and downstream systems.
-
-**T (Task)**
-
-> I needed to restore stability quickly, coordinate across teams, identify the root cause, and put preventive controls in place so the issue wouldn’t recur.
-
-**A (Action)**
-
-> First, I focused on mitigation and communication. I aligned with stakeholders on the immediate impact, established a clear incident channel, and confirmed ownership for key actions.
-> Second, I used a structured triage approach: I checked the CI/CD deployment logs and compared the deployed artifact/config versions, reviewed Kubernetes events and pod logs, and validated health probes and resource limits to rule out common causes like configuration mistakes, dependency failures, or OOM restarts.
-> Based on what we found, we executed the safest recovery step—[rollback to the previous stable version / traffic shift / feature toggle]—to restore service quickly.
-> After stabilization, I led the follow-up: we documented a clear timeline, performed root cause analysis, and implemented preventive changes such as adding pre-deploy validation, improving readiness/liveness probe tuning, adding stronger post-deploy smoke tests, and updating runbooks so on-call responders could diagnose faster next time.
-
-**R (Result)**
-
-> We restored service within [X minutes/hours], minimized user impact, and improved the release process so the same failure mode was much less likely to happen again. The biggest win wasn’t just the fix—it was converting a one-time incident into lasting improvements in detection, rollback safety, and operational readiness.
-> *(Optional metrics to plug in: “MTTR reduced by X%”, “repeat incidents eliminated”, “post-deploy failure rate decreased by X%”.)*
-
-**One-line “So what”**
-
-> WebBroker is a reliability-sensitive platform, and I’m comfortable operating under release pressure while improving the system so it gets safer over time.
-
----
-
-如果你把你这两件事的 **真实细节**（比如：具体是哪个 pipeline/哪类服务、有没有用 Dynatrace、Veracode 的 gate 规则、一次典型 incident 的触发原因）发我 4–6 句话，我还能把这两个 STAR 故事进一步“**定制成你个人口吻**”，并把每个故事再做一个 **30 秒超短版**（现场更好说）。
