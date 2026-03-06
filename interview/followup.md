@@ -18,7 +18,7 @@ Your follow-up
 
 Makes sense. My approach would be to standardizing the release path and improving guardrails, stable/consistent deployment environment, so the team spends less time firefighting and more time improving the platform.
 
-3) Collaboration & operating model
+3) will there be any after hours deployment for the team?
 
 You ask
 
