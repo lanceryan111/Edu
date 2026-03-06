@@ -41,12 +41,29 @@
 
 ### 4) “Tell me about a time you led a DevOps improvement.”
 
-**How to answer**
+### STAR Story #1 — Leading a DevOps Migration (GitHub Actions + multi-component releases)
 
-* Use STAR (see Story #1 below).
-* Emphasize: standardization, reusable templates, security gates, measurable outcomes.
+**S (Situation)**
 
----
+> When I joined TD Online & Mobile Foundation, our build and deployment processes across multiple teams were not stable, the tech stack is BB + Jenkins. Teams are facing  with higher risk of CI/CD platform not avaiable/slowness when develop, build and release.
+
+**T (Task)**
+
+> I was responsible for leading the migration to TDU using GHA to improve delivery reliability and standardizing CI/CD so we could have a stable develop/build/release platform, reduce down time, and align with enterprise security and governance requirements.
+
+**A (Action)**
+
+> I broke the work into practical phases.
+> First, I identified the common build and deploy patterns across services and created reusable GitHub Actions common workflows that teams could adopt with minimal changes.
+> Second, I embedded quality and governance checks (sonar scan/veracode scan,dynatrace) directly into the pipeline—standard test steps, artifact versioning, and security scanning gates where required.
+> Third, I improved deployment consistency by aligning environment configuration and deployment logic using infrastructure/deployment automation (for example, Terraform/Ansible where applicable) and by enforcing clear release inputs (version tags, config parameters, approval points).
+> Finally, I partnered closely with development, QA, and ITS stakeholders to validate the process, document the runbooks, and roll it out incrementally so the migration wouldn’t disrupt delivery. 
+
+**R (Result)**
+
+> As a result, CI/CD platform became more reliable and easier to support. The migration significantly improved reliability (SLA nearing 99%) and reduced operational overhead. Teams can focus on feature delivery—after a GitHub commit, the automated pipeline executes the remaining steps end to end. Over time we saw fewer platform -related issues and faster troubleshooting because the pipeline behavior was standardized and well documented.
+> *(Optional metrics to plug in: “release time reduced by ~X%”, “manual steps reduced from A to B”, “deployment failures reduced by X%”, “MTTR improved by X%”.)*
+
 
 ### 5) “Tell me about a time you handled a production/release issue.”
 
@@ -81,28 +98,6 @@ Below are two stories you can reuse for many behavioral questions. Replace brack
 
 ---
 
-### STAR Story #1 — Leading a DevOps Standardization Improvement (GitHub Actions + multi-component releases)
-
-**S (Situation)**
-
-> When I joined my current scope at TD Online & Mobile Services, our build and deployment processes across multiple applications and microservices were inconsistent. Teams had different scripts and manual steps, and releases were taking longer than necessary with higher risk of configuration drift and last-minute fixes.
-
-**T (Task)**
-
-> I was responsible for improving delivery reliability and standardizing CI/CD so we could deploy multiple components more consistently, reduce manual effort, and align with enterprise security and governance requirements.
-
-**A (Action)**
-
-> I broke the work into practical phases.
-> First, I identified the common build and deploy patterns across services and created reusable GitHub Actions workflows that teams could adopt with minimal changes.
-> Second, I embedded quality and governance checks directly into the pipeline—standard test steps, artifact versioning, and security scanning gates where required.
-> Third, I improved deployment consistency by aligning environment configuration and deployment logic using infrastructure/deployment automation (for example, Terraform/Ansible where applicable) and by enforcing clear release inputs (version tags, config parameters, approval points).
-> Finally, I partnered closely with development, QA, and ITS stakeholders to validate the process, document the runbooks, and roll it out incrementally so the change wouldn’t disrupt delivery.
-
-**R (Result)**
-
-> As a result, deployments became more repeatable and easier to support. We reduced manual steps and release friction, improved auditability, and lowered operational risk. Over time we saw fewer deployment-related issues and faster troubleshooting because the pipeline behavior was standardized and well documented.
-> *(Optional metrics to plug in: “release time reduced by ~X%”, “manual steps reduced from A to B”, “deployment failures reduced by X%”, “MTTR improved by X%”.)*
 
 **One-line “So what”**
 
