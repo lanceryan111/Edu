@@ -8,12 +8,12 @@
 
 **Script**
 
-> I’m a DevOps and Platform Engineer with 8+ years of experience building end-to-end CI/CD, deployment automation, and cloud-native delivery across enterprise environments.
-> At TD Online & Mobile Services, I lead improvements to build and release workflows using GitHub Actions,
-> and I’ve worked extensively with Azure, Kubernetes, infrastructure automation (Terraform/Ansible), and security scanning practices.
+> I’m a Lead DevOps and Platform Engineer with 8+ years of experience building end-to-end CI/CD solutions, deployment automation, and cloud-native delivery across enterprise environments.
+> At TD Online & Mobile Foundation, I lead improvements to build and release workflows using GitHub Actions,
+> and I’ve worked extensively with Azure, Kubernetes, infrastructure automation (Terraform/Ansible), and DevsecOps practices.
 > My strength is bringing delivery speed, stability, and governance together—making releases more repeatable and reducing operational risk.
-> I also collaborate frequently with the WebBroker mobile team, so I’m familiar with cross-team release coordination and the kinds of platform constraints that matter in production.
-> I’m excited about WebBroker because it’s a highly visible, reliability-sensitive platform, and I want to bring my automation and reliability background into a space with even higher impact.
+> I also collaborate frequently with the ET/Active Trader mobile team, so I’m familiar with cross-team release coordination and the kinds of platform constraints that matter in production.
+> I’m excited about this role at WebBroker platform because it’s a highly visible, reliability-sensitive platform, and I want to bring my automation and reliability background into a space with even higher impact.
 
 ---
 
@@ -21,12 +21,11 @@
 
 **Script**
 
-> There are three reasons.
-> First, WebBroker is a mission-critical platform in TD Wealth—reliability, security, and release quality directly impact client experience and trust.
-> Second, the role aligns strongly with what I do best: GitHub Actions delivery automation, Kubernetes/Azure operations, security scanning integration, and proactive release governance.
-> Third, I already work closely with the WebBroker mobile team, which means I understand the cross-team dependencies and can ramp up quickly to reduce friction in build/deploy/release cycles.
-> At this point in my career, I’m looking for a role where I can apply proven platform practices to a more complex, higher-stakes environment and drive measurable improvements.
-I think I can contribute quickly in making services safer and more operable, while continuing to grow deeper into the application
+> There are few reasons.
+> First, WebBroker is a critical platform in TD Wealth—reliability, security, and release quality directly impact customer experience and trust.
+> Second, the role aligns strongly with what I do best: GitHub Actions delivery automation, containerization/Azure operations, DevSecOps (sonar/veracode) integration, and proactive release governance.
+> Third, I already work closely with the ET/Active Trader mobile team, where I understand the cross-team dependencies and can ramp up quickly to reduce friction in build/deploy/release cycles. I recently help with Darius and Rex to set up a new WMIP profile in Veracode for ETR app. 
+> At this point in my career, I’m looking for a role where I can apply proven platform practices to a more complex, higher-stakes environment and drive measurable improvements. I think I can contribute quickly in making Webbroker services safer and more operable, while continuing to contribute within TD
 ---
 
 ### 3) “What are your top strengths / what value would you bring?”
