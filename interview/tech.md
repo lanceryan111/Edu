@@ -1333,15 +1333,26 @@ azure_rm plugin
 
 Expected structure
 
-```text
-roles/
-   nginx/
-      tasks/
-      templates/
-      defaults/
-      vars/
-      handlers/
-```
+ansible/
+├── inventories/
+│   ├── dev/
+│   │   ├── hosts.yml
+│   │   └── group_vars/
+│   │       ├── all.yml          # dev 全局变量
+│   │       ├── webservers.yml
+│   │       └── databases.yml
+│   ├── staging/
+│   │   ├── hosts.yml
+│   │   └── group_vars/
+│   │       ├── all.yml
+│   │       ├── webservers.yml
+│   │       └── databases.yml
+│   └── production/
+│       ├── hosts.yml
+│       └── group_vars/
+│           ├── all.yml
+│           ├── webservers.yml
+│           └── databases.yml
 
 Key concept
 
