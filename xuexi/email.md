@@ -10,3 +10,16 @@ Thanks again for your time and consideration. Please let me know if there’s an
 
 Best regards,
 Fei
+
+
+Hi [Manager Name],
+
+Thank you again for taking the time to meet with me today for the second-round interview for the WebBroker Platform Lead role. I really enjoyed our conversation and learning more about the team’s current priorities and challenges.
+
+Our discussion reinforced my interest in the role. I’m excited about the opportunity to contribute my experience in CI/CD standardization, Kubernetes/Azure delivery, and release governance—especially given my ongoing collaboration with the WebBroker mobile team.
+
+Please let me know if there’s any additional information I can provide. Thank you again for your time and consideration, and I look forward to hearing about next steps.
+
+Best regards,
+Fei
+
